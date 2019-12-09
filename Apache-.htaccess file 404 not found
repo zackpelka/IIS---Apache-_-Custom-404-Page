@@ -1,0 +1,3 @@
+For Apache:
+Step 1: Creating or finding the “.htaccess” file: To find your .htaccess file, just take a look in the root directory for your website using your usual FTP client. You should see it in there. If you need to create one, its simple. Just open up a text editor, such as Notepad, and name the file “.htaccess”.
+Step 2: Add the following text to the .htaccess file: “ErrorDocument 404 /404.html”. This line names your 404 error page as ‘404.html’ and locates it in your web site’s root directory.
