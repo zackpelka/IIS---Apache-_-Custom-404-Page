@@ -3,3 +3,15 @@ Step 1: Creating or finding the “.htaccess” file: To find your .htaccess fil
 Step 2: Add the following text to the .htaccess file: “ErrorDocument 404 /404.html”. This line names your 404 error page as ‘404.html’ and locates it in your web site’s root directory.
 Step 3: Save file and get it uploaded into your server’s root directory.
 Step 4: Check out if things are working fine by opening the web browser and navigating to www.yourdomain.com/asdf (a random page that does not exist).Step 3: Save file and get it uploaded into your server’s root directory.
+
+What not to do:
+While designing the custom 404 error page, there are some things that you should avoid.
+Never redirect the 404 errors to a different web site. Remember the goal of the custom 404 is to improve your visitors experience. Sending them to a totally different website will frustrate them.
+ 
+Do not redirect 404 errors to the website’s home page. This will only confuse your visitor. This is because they clicked on one link and found themselves back on the homepage for no reason. Bad move.
+
+And perhaps most importantly; don’t blame your visitor!
+ 
+Brilliant 404 pages
+404 pages don’t have to be boring. Some web designers have used 404 pages as an opportunity to create something fun and engaging for their lost visitors.
+As mentioned earlier in this article, some of the very best 404 pages even attract backlinks of their own!
