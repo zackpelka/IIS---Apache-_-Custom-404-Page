@@ -1,17 +1,30 @@
 For Apache:
-Step 1: Creating or finding the “.htaccess” file: To find your .htaccess file, just take a look in the root directory for your website using your usual FTP client. You should see it in there. If you need to create one, its simple. Just open up a text editor, such as Notepad, and name the file “.htaccess”.
-Step 2: Add the following text to the .htaccess file: “ErrorDocument 404 /404.html”. This line names your 404 error page as ‘404.html’ and locates it in your web site’s root directory.
-Step 3: Save file and get it uploaded into your server’s root directory.
-Step 4: Check out if things are working fine by opening the web browser and navigating to www.yourdomain.com/asdf (a random page that does not exist).Step 3: Save file and get it uploaded into your server’s root directory.
+Ah, the aggravating 404 error page. You've seen it. There you are, surfing in your favorite search engine when you happen upon just the thing you're looking for. You click: (***Raspberry Sound Effect***) Nothing but a white page with the words "404 Error" and some other techie-sounding speak beneath.
+What's even more cheesy about the error code is that it really doesn't tell you what the problem is. Basically you've been informed that the server cannot find what you want. It doesn't tell you why, how to fix it, or where to go from that point. You really don't have much choice but to hit your BACK button, call the computer a dirty name, and try again.
+But then you see it--a server that's set up with its own special 404 error page that politely apologizes and offers you links to e-mail site administrators and maybe a site search engine. Now that's class! So I waltzed into the office of the Webmaster at work and asked how it was done. I was stunned at how easy it is to set up.
+Want one of your own? Here's how.
 
-What not to do:
-While designing the custom 404 error page, there are some things that you should avoid.
-Never redirect the 404 errors to a different web site. Remember the goal of the custom 404 is to improve your visitors experience. Sending them to a totally different website will frustrate them.
- 
-Do not redirect 404 errors to the website’s home page. This will only confuse your visitor. This is because they clicked on one link and found themselves back on the homepage for no reason. Bad move.
+You'd Best Ask First
+I'm going to offer you a very basic fix to this problem, but you'd best ask your system people if they want you doing this first. Better yet, ask them if you might mess things up by doing this.
+Your .htaccess File
+This is the file that will do the trick for you. You should already have one waiting inside of your Web site directory. If you don't, then you'll need to create it.
+FTP into your server so you're looking at the top level directory where you store your Web page files. This should be the directory that contains your home page document. Look for the .htaccess file there. Again, if you don't find it (it should be one of the very first files), then you'll need to create it.
+Please notice the dot (.) starting it off.
+Here again is where you might have to get in touch with your systems people and ask them how they want you to edit or create this file. Some may allow you to do it like you would any other Web page, by creating a text document and uploading it, while others might want you to use a PICO editor and do it right on the server. It might be best not to guess at it.
 
-And perhaps most importantly; don’t blame your visitor!
- 
-Brilliant 404 pages
-404 pages don’t have to be boring. Some web designers have used 404 pages as an opportunity to create something fun and engaging for their lost visitors.
-As mentioned earlier in this article, some of the very best 404 pages even attract backlinks of their own!
+Let's Edit It
+Add this to the .htaccess file:
+ErrorDocument 404 http://www.domain.com/404page.html
+That's it. Just that line. (Yes, it should all be on one line--some smaller computer screens may bump it down to two--get it all on one.) Where I have http://www.domain.com/404page.html is where you place the full URL pointing to that new, fancy 404 Error page you've created.
+...you have already created an error page, right?
+
+Let's Turn It On
+If you already had an .htaccess page in your directory then chances are it's already turned on. If not, you need to do that. If you're using a UNIX server then you'll need to telnet into the server and type this command at the prompt:
+chmod 644 .htaccess
+If you're not running a UNIX machine, I believe the file is ready to go, but again, contact your server people to see if I'm on the money or not.
+
+That's It!
+Upload your new 404 error page, if you haven't already, and log into your site. Then try to go to a page that doesn't exist. You should get the page you denoted in the .htaccess file. If you don't, first check to see if the file is turned on by trying the CHMOD again. If you still get nothing, then get back in touch with your system people and ask them for more specific help.
+You'll be the envy of people who go to non-existent pages everywhere.
+
+Enjoy!
